@@ -36,3 +36,27 @@ export function getAlbumWithYearOf(albums, year) {
     }
   }
 }
+
+// search album by artist
+// node index.mjs artist "Michael Jackson"
+
+export function getAlbumWithArtistName(albums, artist) {
+  for (let i = 0; i < albums.length; i++) {
+    if (albums[i].artist === artist) {
+      console.log("Album of Michael Jackson", albums[i].title);
+      break; // exit the for loop
+    }
+  }
+}
+
+// search album by genre
+// node index.mjs genre rock
+
+export function getAlbumWithRockGenre(albums, genre) {
+  for (let i = 0; i < albums.length; i++) {
+    if (albums[i].genres === genre) {
+      console.log("Album genre is rock", albums[i].title);
+      break; // exit the for loop
+    }
+  }
+}
